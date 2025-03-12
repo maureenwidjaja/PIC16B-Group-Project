@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<header>
+    <h1>Recommendations for if you enjoyed "{{ book }}"</h1>
+</header> 
+
+<main>
+   <h2>Your personalized list of recommended books:</h2>
+   <ul>
+      {% if recommendations %}
+            {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No recommendations found.</li>
+        {% endif %}
+    </ul>
+   <a href="/">Return to Search</a>
+
+   
+   
+</main>
+ 
+
+
+{% endblock %}

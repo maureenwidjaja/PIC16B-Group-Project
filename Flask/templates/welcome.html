@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <header>
+    <h1>Welcome, {{ username }}!</h1>
+</header>
+
+
+<main>
+    <h2>Books</h2>
+    <form method="POST" action="/recommend">
+    <ul>
+        {% for book in library %}
+            <li>
+              <input type="checkbox" name="selected" value="{{ book['name'] }}">
+            {{ book['name'] }} - ({{book['subject'] }}) - {{ book['author'] }}</li>
+        {% endfor %}
+    </ul>
+    <button type="submit">Recommendations</button>
+  </form>
+</main>
+
+
+{% endblock %}
