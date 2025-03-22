@@ -1,6 +1,7 @@
 # Book Recommendation System
 
-In this project, we extracted specific data from UCSD's extracted Goodreads dataset. Then, we transferred
+In this project, we extracted specific data from UCSD's extracted Goodreads dataset. Then, we fed the output into our machine-learning model (Non-negative Matrix Factorization model) to generate book recommendations for the user. To allow the user to interact with the model, we chose to create a dynamic website using Flask, as we believe it is the most suitable framework for presenting the book recommendation outputs.
+
 
 Initially, we used [BeautifulSoup](https://github.com/maureenwidjaja/PIC16B-Group-Project/tree/main/BeautifulSoup) to scrape the data from Open Library. However, after noticing that it parses the web at an extremely slow rate, we decided to use [Scrapy](https://github.com/maureenwidjaja/PIC16B-Group-Project/tree/78391161c60e94ca5244c0a87bc584f422f1fd29/openlibrary_project)  instead as it allows us to parse the web asynchronously. However, after encountering multiple issues, we decided to extract specific data from the dataset that UCSD had extracted from Goodreads in 2017. The issues with Scrapy were mainly due to too many requests being sent to the server, which led us to being blocked by the website, and due to the fact that Open Library is not a popular platform where people review books in general. Moreover, books that have 'ratings' are not guaranteed to have 'reviews'. The quantity of books that are rated is low, and the number of books that are reviewed is even smaller. Therefore, we changed our method and extracted data from Goodreads that were scraped by [UCSD](https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html) in 2017.
 
