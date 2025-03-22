@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<header>
+    <h1 class="text-center fs-1 cormorant-infant">Recommendations for you if you enjoyed "{{ book }}"</h1>
+</header> 
+
+<main class="cormorant-infant">
+
+   <div>
+
+       <h2 class="fs-4">Your personalized list of recommended books:</h2>
+      <ul class="fs-5 container my-4">
+         <table class="table table-striped table- bordered w-100 table-secondary">
+            <tbody>
+ 
+               {% if recommendations %}
+                  {% for rec in recommendations %}
+                     <tr>
+                        <td class="text-center">{{ rec }}</td>
+                      
+                  {% endfor %}
+               {% else %}
+                  <tr>
+
+                     <td>No recommendations found.</td>
+                  </tr>
+              {% endif %}
+            </tbody>
+
+         </table>
+       </ul>
+   </div>
+
+   <a class="cormorant-infant" href="/input">Return to Search</a>
+</main>
+ 
+
+{% endblock %}

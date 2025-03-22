@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<header>
+    <h1 class="text-center fs-1 cormorant-infant">Search Page</h1>
+</header> 
+
+  <main class="text-center cormorant-infant">
+
+
+    <p class="fs-3 fst-italic">Please enter a book you enjoy that you'd like similar recommendations for </p>
+
+      <div class="fw-bold">
+        <form method="POST" action="/recommend">
+          <div class="input-group container my-4">
+            <input type="text" name="book" required class="form-control" placeholder="Enter a book title"></input>
+            <button type="submit" class="input-group-text btn btn-secondary">Search</button>
+          </div>
+        </form>
+       </div>
+
+
+  </main>
+
+
+
+{% endblock %}
