@@ -31,3 +31,7 @@ This is the machine learning model which we created using Keras, Tensorflow, and
 #### Flask folder
 
 So, once all our data was collected and trained using our NMF model, we created a Flask Application for users to use the system. The Application opens up to a Home page from our index.html, where users have the option to get started with book recommendations by clicking the “Start” button or navigating to another page from the navigation menu at the top of the page. Because the basic styling properties in Flask are a bit basic, we also implemented tools from Bootstrap. This allowed us to have more stylistic freedom with the application and add user-friendly tools such as the navigation menu.
+
+#### Data Extraction folder
+
+This folder holds all the code to extract the data from the Goodreads dataset. It involves using Sentiment Analysis on words by asigning common words to sentiment categories and used Multiprocessing for Parallel Processing.
