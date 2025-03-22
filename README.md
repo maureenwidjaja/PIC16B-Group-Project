@@ -27,7 +27,7 @@ This is the [output](https://github.com/maureenwidjaja/PIC16B-Group-Project/blob
 
 This is the machine learning model which we created using Keras, Tensorflow, and Scikit-learn. It represents the Non-negative Matrix Factorization (NMF) model. This model takes in a small subset of a data frame with only numerical values in each cell. The main part in this code shows that we are  able to extract the five most related books to the user's input, and then extract the names of corresponding books for each of the top five values. These five books are then added to a list, and outputted as the list of recommended books for the user. However, this file only uses the sample data that we created on purpose in order to make sure the model runs well.
 
-#### final_data.ipynb
+#### Final_Data.ipynb
 
 This is the machine learning model that is the same as the one in ML_Sample_Data.ipynb but we fed it the final dataset.
 
