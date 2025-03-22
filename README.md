@@ -16,4 +16,8 @@ This folder contains our Scrapy code to parse Open Library. It assumes that we s
 
 ### UCSD_method.ipynb
 
-This [method](https://github.com/maureenwidjaja/PIC16B-Group-Project/blob/main/UCSD_method.ipynb) is another way of gathering data where we used Goodreads datasets UCSD had already scraped in late 2017. In this file, we used the goodreads_books.json.gz metadata (about 2.3 million books), and took a randomized popular sample that was representative of the books (about 50,000) books. Then, we extracted the genres from the books and  hot encoded them into the dataframe, making the genres columns and the 1s and 0s values to see if they had the genre or not.
+This [method](https://github.com/maureenwidjaja/PIC16B-Group-Project/blob/main/UCSD_method.ipynb) is another way of gathering data where we used Goodreads datasets [UCSD](https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html) had already scraped in late 2017. In this file, we used the goodreads_books.json.gz metadata (about 2.3 million books), and took a randomized popular sample that was representative of the books (about 50,000) books. Then, we extracted the genres from the books and  hot encoded them into the dataframe, making the genres columns and the 1s and 0s values to see if they had the genre or not.
+
+### Scrapy_cleaned_output.ipynb
+
+This is the [output](https://github.com/maureenwidjaja/PIC16B-Group-Project/blob/main/Scrapy_cleaned_output.ipynb) from the Scrapy code which only has 53 rows and 5 columns. After some cleaning, each column corresponds to the review description, e.g. "slow paced, fast paced, etc." and the numerical output represent how much the book corresponds to that description. By having numerical outputs, it will be easier for our model to process the data. However, since we are shifting our method to ...., this file exists only to prove that our old method using Scrapy is not efficient as it is not outputting the thousands of book data that we intended.
